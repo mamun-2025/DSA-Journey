@@ -19,4 +19,15 @@ class Solution:
             answer.append(str(i))
 
       return answer 
+
+
+"""
+We iterate from 1 to n. 
+For each number, we check whether it is divisible by both 3 and 5.
+If it is, we add "FizzBuzz". 
+Otherwise, if it is divisible by 3, we add "Fizz".
+If it is divisible by 5, we add "Buzz".
+Otherwise, we add the number as a string.
+Finally, we return the result list.
+"""
       
