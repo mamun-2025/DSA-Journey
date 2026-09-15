@@ -14,6 +14,7 @@ class Solution:
 
 
 """
+
 First of all, I check if n is less than or equal to zero, because a power of two must be positive.
 Then I repeatedly divide n by 2 while it is divisible by 2.
 If the final value becomes 1, the number is a power of two, so I return True.
@@ -23,12 +24,15 @@ The time complextity is 0(log n) and space complexity is 0(1).
 """
 
 
+
+
 class Solution:
    def isPowerOfTwo(self, n: int) ->bool:
       if n <= 0:
          return False 
 
       return n & (n- 1) == 0 
+
 
 """
 Pattern: Bit Manipulation
