@@ -16,7 +16,7 @@ class Solution:
 
       return num
 
- """
+"""
  I repeatedly calculate the sum of the digits until the number becomes a single digit.
  I use the modulo operator to extract the last digit and integer division to remove it.
  I store the sum of the digits and use it as the new number for the next iteration.
