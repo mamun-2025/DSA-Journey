@@ -29,7 +29,16 @@ class Solution:
 
       return total 
 
-  
+
+"""
+
+I use a dictionary to map each Roman symbol to its integer value.
+Then I travese the string from left to right.
+For each character,I compare its value with the next character's value.
+If the current value is smaller, I subtract it, otherwise, I add it. 
+For the last character, I simply add its value.
+
+"""
 
          
       
