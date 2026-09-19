@@ -1,9 +1,8 @@
 
 
-n = int(input("Enter a number: "))
+n = int(input("Enter a integer number:"))
+
 if n % 2 == 0:
-   print("Even")
-else:
-   print("Odd")
-
-
+   print(f"{n}- is a Even number.")
+else: 
+   print(f"{n}- is a Odd number.")
