@@ -145,10 +145,22 @@ print(names)
 
 # 🟢 Short Paragraph
 """
-A Python list is an ordered and mutable collection that allows us to store multiple values in a single variable.
+A Python list is an ordered and mutable collection 
+that allows us to store multiple values in a single variable.
 Each element in a list has a position called an index, and indexing starts from 0 in Python.
-A list can contain  duplicate values and can also different types of data, such as integers, strings, floats, and boolean.
+A list can contain duplicate values and can also different types of data, 
+such as integers, strings, floats, and boolean.
 Since lists are mutable, we can change, add, or remove elements after creating them.
-Lists are very important in DSA because we often use them like arrays to store data, access elements, traverse through them, compare values, and solve different problems.
+Lists are very important in DSA because we often use them like arrays to store data, 
+access elements, traverse through them, compare values, and solve different problems.
 
+বাংলা অর্থ:
+Python List হলো একটি ordered এবং mutable collection, 
+যেখানে আমরা একটি variable-এর মধ্যে একসাথে অনেকগুলো value রাখতে পারি। 
+List-এর প্রতিটি element-এর একটি নির্দিষ্ট position থাকে, যাকে index বলা হয় 
+এবং Python-এ index 0 থেকে শুরু হয়। একটি List-এর মধ্যে একই value একাধিকবার রাখা যায় 
+এবং integer, string, float, boolean-এর মতো বিভিন্ন ধরনের data-ও রাখা সম্ভব। 
+List mutable, অর্থাৎ List তৈরি করার পরেও আমরা এর element পরিবর্তন, যোগ বা বাদ দিতে পারি। 
+DSA-তে List খুবই গুরুত্বপূর্ণ, কারণ আমরা এটিকে অনেকটা array-এর মতো ব্যবহার করে data store করি, 
+element access করি, একে একে সব element দেখি, value compare করি এবং বিভিন্ন problem solve করি।
 """
