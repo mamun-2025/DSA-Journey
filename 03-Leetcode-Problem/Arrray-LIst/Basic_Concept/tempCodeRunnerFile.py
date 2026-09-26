@@ -1,1 +1,0 @@
-numbers.pop(1)
