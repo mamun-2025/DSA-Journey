@@ -272,7 +272,7 @@ print(result)
 
 
 
-# # 1️⃣3️⃣ 🧠 আজকের One-Minute Revision: 
+# 1️⃣3️⃣ 🧠 আজকের One-Minute Revision: 
 """
 append()
    ↓
@@ -295,8 +295,44 @@ for x in arr:
 """
 
 
-# 1️⃣4️⃣ Short Paragraph
+
+
+
+
+
+
+
+# 1️⃣4️⃣ Short Paragraph Interview questions
 """
+🎯 Interview Questions
+Q1. What does append() do?
+
+Answer:
+append() adds one element to the end of a Python list.
+
+Q2. Does append() modify the original list?
+
+Answer:
+Yes. append() modifies the list in place.
+
+Q3. What does append() return?
+
+Answer:
+It returns None.
+
+Q4. What is the time complexity of append()?
+
+Answer:
+Python list append is O(1) amortized time.
+
+Q5. What is the difference between append() and extend()?
+
+Answer:
+append() adds its argument as a single element, while extend() adds the elements from an iterable individually.
+
+
+
+🎯 Paragraph
 The append() method is used to add a new element to the end of a Python List.
 It changes the original list directly and does not return a new list.
 So we should use list.append(value) instead of assigning its result back to the list.
@@ -322,4 +358,5 @@ original List traverse করা, প্রতিটি element process কর�
 Python List-এ একটি element append করতে O(1) amortized time লাগে, 
 কারণ Python List dynamic-array-এর মতো কাজ করে। 
 সহজভাবে মনে রাখবে: append() List-এর শেষে একটি item যোগ করে এবং problem solving-এর সময় result List তৈরি করতে এটি খুবই গুরুত্বপূর্ণ।
+
 """
