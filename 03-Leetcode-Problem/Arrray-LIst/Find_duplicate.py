@@ -915,4 +915,41 @@ O(n) average time + O(n) space
 """
 
 
+# Short Paragraph"
+"""
+Finding a duplicate in an array means detecting a value that appears more than once. 
+A simple brute-force approach uses two nested loops to compare each element with the elements that come after it, 
+which takes O(n²) time and O(1) extra space. 
+A more efficient approach uses a Python set to keep track of the values we have already seen.
+While traversing the array, we check whether the current value is already in the seen set; 
+if it is, we have found a duplicate and can return it immediately,
+otherwise we add the value to the set and continue. 
+This approach takes O(n) time on average because set membership checking and insertion are O(1) on average, 
+while the extra space is O(n) because the set may store up to n unique values. 
+An important detail is to check if number in seen before calling seen.add(number), 
+because adding the value first would make the current value appear to be a duplicate. 
+This problem demonstrates an important DSA concept called the time-space tradeoff,
+where we use extra memory to reduce the running time. 
+The key pattern is: traverse the array, check whether the value has been seen before, 
+return it if it has, and otherwise add it to the set.
 
+
+বাংলা অর্থ:
+একটি Array-তে duplicate খুঁজে বের করা মানে এমন কোনো value শনাক্ত করা, যেটি একাধিকবার এসেছে। 
+এর একটি সহজ Brute Force approach হলো দুটি nested loop ব্যবহার করে প্রতিটি element-এর সাথে তার পরের elementগুলো compare করা। 
+এই পদ্ধতিতে O(n²) time এবং O(1) extra space লাগে। 
+আরও efficient approach হলো Python-এর set ব্যবহার করা। 
+আমরা একটি seen set তৈরি করি, যেখানে আগে দেখা valueগুলো রাখি। 
+Array traverse করার সময় প্রথমে check করি বর্তমান value-টি seen set-এর মধ্যে আগে থেকেই আছে কি না। 
+যদি থাকে, তাহলে সেটি duplicate এবং আমরা সঙ্গে সঙ্গে value-টি return করতে পারি। 
+আর যদি না থাকে, তাহলে সেটিকে seen set-এ add করে পরবর্তী element-এর দিকে যাই। 
+এই approach-এর average time complexity O(n), কারণ set-এর membership checking এবং insertion সাধারণত O(1) সময় নেয়। 
+আর space complexity O(n), কারণ সর্বোচ্চ nটি unique value seen set-এ থাকতে পারে। 
+এখানে একটি গুরুত্বপূর্ণ বিষয় হলো, seen.add(number) করার আগে if number in seen check করতে হবে। 
+কারণ আগে add করলে current value-টিকেই ভুলভাবে duplicate হিসেবে ধরে নেওয়া হবে। 
+এই problem আমাদের একটি গুরুত্বপূর্ণ DSA concept শেখায়, যার নাম Time-Space Tradeoff—অর্থাৎ extra memory ব্যবহার করে 
+আমরা execution time কমিয়ে আনছি। 
+মূল pattern হলো: Array traverse করো → value আগে দেখা হয়েছে কি না check করো → দেখা 
+থাকলে duplicate return করো → না থাকলে set-এ add করো।
+
+"""
