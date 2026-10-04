@@ -634,7 +634,7 @@ def find_all_duplicates(arr):
    return duplicates
 
 arr = [1, 2, 3, 2, 3, 4, 3]
-print(find_duplicate(arr))
+print(find_all_duplicates(arr))
 
 
 
