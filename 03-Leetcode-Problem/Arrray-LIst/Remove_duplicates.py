@@ -1,5 +1,21 @@
 
 
+# Leetcode Problem
+# Remove_duplicates_from_sorted_array
+
+class Solution:
+   def removeDuplicates(self, nums: list[int])-> int:
+      i = 0
+
+      for j in range(1, len(nums)):
+         if nums[j] != nums[i]:
+            i += 1 
+            nums[i] = nums[j]
+
+      return i + 1 
+
+
+
 # আগের Lesson 15 — Find Duplicate-এর পরের step শিখব।
 
 # Lesson 15-এ আমাদের কাজ ছিল:

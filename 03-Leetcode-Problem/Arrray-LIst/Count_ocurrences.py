@@ -1,5 +1,26 @@
 
 
+
+# Leetcode problem
+# How-many_numbers_smaller_than_current_number
+class Solution:
+   def samllerNumbersThanCurrent(self, nums: list[int])-> list[int]:
+
+      result = []
+
+      for current in nums:
+         count = 0
+
+         for num in nums:
+            if num < current:
+               count += 1
+
+         result.append(count)
+
+      return result
+
+
+
 # 1️⃣ Problem কী?
 # ধরো আমাদের একটি list আছে:
 numbers = [10, 20, 10, 10, 30, 20, 40]
