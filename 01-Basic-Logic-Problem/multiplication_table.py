@@ -12,3 +12,11 @@ For each iteration, I multiply the given number by current loop variable and pri
 Since the loop runs n times, so time complexity is 0(n) and space complexity is 0(1).
 
 """
+
+##
+n = int(input("Enter a number: "))
+
+for i in range(1, 11):
+   print(f"{n} x {i} = {i * n}")
+
+
