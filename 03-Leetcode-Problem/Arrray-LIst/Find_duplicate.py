@@ -1,7 +1,5 @@
 
 
-
-
 # Leetcode Problem
 # Contains duplicate
 class Solution:
