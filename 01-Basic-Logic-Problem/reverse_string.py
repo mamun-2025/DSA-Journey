@@ -47,7 +47,14 @@ reversed = "".join(chars)
 print(reversed)
 # Time complexity = 0(n)
 # Space complexity = 0(n)
+"""
+Can you do it without slicing?
+= Yes, I can use two pointer technique.
+  I convert the string into a mutable list,
+  keep one pointer at the beginning and another pointer at the end,
+  swap the characters, move both pointers toward the center.
 
+"""
 
 
 # number reverse
