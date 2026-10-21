@@ -1,5 +1,22 @@
 
 
+# Leetcode Problem 
+# Two sum
+class Solution:
+   def twoSum(self, nums: list[int], target: int)-> list[int]:
+      seen = {}
+
+      for index, current in enumerate(nums):
+         needed = target - current
+
+         if needed in seen:
+            return [seen[needed], index]
+
+         seen[current] = index
+
+
+
+
 
 """
 🟢 Lesson 19 — Nested Loop & O(n²)
