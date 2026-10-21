@@ -24,6 +24,7 @@ The time complexity is 0(1) and space complexity is 0(1).
 """
 
 # Future array of minimum
+# Minimum in a list
 array = [5, 8, 2, 7, 9]
 
 if not array:

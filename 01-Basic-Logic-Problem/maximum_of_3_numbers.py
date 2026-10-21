@@ -26,6 +26,7 @@ The time complexity is 0(1) and space complexity is 0(1).
 
 
 # Future array of maximum numbers
+# Maximum in a list
 numbers = [2, 5, 7, 9, 1]
 
 maximum = numbers[0]
