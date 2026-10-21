@@ -26,13 +26,26 @@ The time complexity is 0(1) and space complexity is 0(1).
 # Future array of minimum
 array = [5, 8, 2, 7, 9]
 
-minimum = array[0]
+if not array:
+   print("array is empty")
 
-for arr in array:
-   if arr < minimum:
-      minimum = arr 
+else:
+   minimum = array[0]
 
-print(minimum)
+   for arr in array:
+      if arr < minimum:
+         minimum = arr 
+
+   print(minimum)
+
+"""
+I initialize the minimum with the first element. 
+Then I traverse the array and compare each element with the current minimum. 
+If I find a smaller element, I update the minimum. 
+Since I visit every element once, the time complexity is O(n), 
+and the auxiliary space complexity is O(1).”
+
+"""
 
 
 
@@ -44,3 +57,12 @@ c = 1
 minimum = min(a, b, c)
 
 print(minimum)
+
+
+arr = [1, 5, 9, 2, 4]
+result = min(arr)
+print(result)
+
+
+
+

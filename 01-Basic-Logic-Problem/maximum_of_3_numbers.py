@@ -36,6 +36,14 @@ for number in numbers:
 
 print(maximum)
 
+"""
+I initialize the maximum with the first element of the array. 
+Then I traverse the array and compare each element with the current maximum. 
+If the current element is greater, I update the maximum. 
+Since every element needs to be checked, the time complexity is O(n), 
+and the auxiliary space complexity is O(1).”
+
+"""
 
 
 # Built in maximum numbers 
@@ -46,3 +54,9 @@ c = 15
 maximum = max(a, b, c)
 
 print(maximum)
+
+
+arr = [1, 5, 9, 2, 4]
+result = max(arr)
+print(result)
+
