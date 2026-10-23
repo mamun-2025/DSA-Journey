@@ -19,6 +19,11 @@ a → 3
 n → 2
 
 """
+# সবচেয়ে সহজ উপায় — count()
+text = "banana"
+result = text.count("a")
+print(result)
+print(text.count("n"))
 
 
 
@@ -42,6 +47,20 @@ print(count)
 তখন Dictionary ব্যবহার করব।
 """
 
+# আমরা যদি প্রত্যেক character-এর জন্য count() করি:
+text = "banana"
+
+for cha in text:
+   print(cha, text.count(cha))
+
+# এখানে সমস্যা হলো একই character বারবার এসেছে।
+# আমরা চাই:
+# b → 1
+# a → 3
+# n → 2
+# এখানেই Dictionary / HashMap গুরুত্বপূর্ণ হয়ে যায়।
+
+
 
 
 # 3️⃣ Dictionary দিয়ে Frequency Count
@@ -56,7 +75,14 @@ for cha in text:
       frquency[cha] += 1
 
 print(frquency)
-
+"""
+Interview Answer:
+"I would use a dictionary to store each character as a key and its frequency as the value. 
+I traverse the string once. 
+If the character already exists in the dictionary, I increment its count; 
+otherwise, I initialize it to one. 
+This gives O(n) time complexity and O(n) space complexity in the worst case."
+"""
 """
 🧠 Logic বুঝুন
 শুরুতে:
@@ -139,6 +165,64 @@ Step	Character	Dictionary
 5	      n	      {b:1, a:2, n:2}
 6	      a	      {b:1, a:3, n:2}
 
+🔥 Dry Run
+Input:
+text = "banana"
+
+
+শুরুতে:
+frequency = {}
+
+
+Iteration 1
+ch = 'b'
+'b' নেই
+
+তাই:
+frequency['b'] = 1
+
+Dictionary:
+{'b': 1}
+
+Iteration 2
+ch = 'a'
+
+a নেই।
+{'b': 1, 'a': 1}
+
+Iteration 3
+ch = 'n'
+
+n নেই।
+{'b': 1, 'a': 1, 'n': 1}
+
+Iteration 4
+ch = 'a'
+
+এবার a আছে।
+frequency['a'] += 1
+
+
+তাই:
+{'b': 1, 'a': 2, 'n': 1}
+
+Iteration 5
+ch = 'n'
+
+n আগে থেকেই আছে।
+{'b': 1, 'a': 2, 'n': 2}
+
+Iteration 6
+ch = 'a'
+
+আবার a:
+{'b': 1, 'a': 3, 'n': 2}
+
+Final Answer
+b → 1
+a → 3
+n → 2
+
 
 
 
@@ -219,7 +303,38 @@ print(frquency)
 
 
 
+"""
+# Edge Cases
+Frequency counting-এর সময় এগুলো ভাববেন।
+Empty String
+text = ""
 
+
+Result:
+{}
+
+One Character
+text = "a"
+
+
+Result:
+{'a': 1}
+
+All Same
+text = "aaaa"
+
+
+Result:
+{'a': 4}
+
+All Unique
+text = "abc"
+
+
+Result:
+{'a': 1, 'b': 1, 'c': 1}
+
+"""
 """
 7️⃣ get() কীভাবে কাজ করে?
 ধরুন:
