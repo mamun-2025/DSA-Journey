@@ -153,6 +153,7 @@ else:
 
 
 
+
 # 8️⃣ String Immutable
 # String তৈরি করার পর individual character সরাসরি পরিবর্তন করা যায় না।
 
@@ -184,18 +185,33 @@ String	            ❌ No
 
 
 
+
 # 9️⃣ String Slicing
 # Syntax: [start:end]
+
+# প্রথম 4 character
 text = "Python"
-print(text[1:4])
+print(text[:4])
+
+# Index 4 থেকে শেষ পর্যন্ত
+text = "Python"
+print(text[4:])
+
 # 1 থেকে শুরু করবে, কিন্তু 4 বাদ যাবে।
 # 1 ≤ index < 4
+text = "Python"
+print(text[1:4])
+
+# পুরো string copy
+text = "Python"
+print(text[:])
+
 
 
 
 # 🔟 Reverse String Using Slicing
-text = "Sajib"
-reverse = text[::-1]
+text = "Mamun"
+reverse = text[::-1] # text[start : end : step]
 print(reverse)
 """
 Complexity:
@@ -204,6 +220,7 @@ Space: O(n)
 
 কারণ নতুন reversed string তৈরি হয়।
 """
+
 
 
 
@@ -217,6 +234,10 @@ if "p" in text.lower():
    print("Found")
 
 """
+Complexity:
+Time  = O(n)
+Space = O(1)
+
 এটি সাধারণভাবে string-এর মধ্যে search করে।
 
 Worst-case complexity:
@@ -225,6 +246,7 @@ O(n)
 কারণ target শেষেও থাকতে পারে বা একেবারেই নাও থাকতে পারে।
 
 """
+
 
 
 # 1️⃣2️⃣ একটি গুরুত্বপূর্ণ Basic Problem
@@ -238,8 +260,6 @@ for cha in text:
    count += 1
 
 print(count)
-
-
 
 
 
@@ -268,5 +288,54 @@ text[0]       → O(1)
 text[i]       → O(1)
 for ch in text → O(n)
 text[::-1]    → O(n) time + O(n) space
+
+"""
+# Direct Indexing
+text = "Mamun"
+print(text[2])
+"""
+Complexity:
+Time  = O(1)
+Space = O(1)
+"""
+
+# Slicing
+text = "Mamun"
+print(text[1:4])
+"""
+
+Complexity:
+Time  = O(k)
+Space = O(k)
+
+যেখানে k হলো slice-এর length।
+"""
+
+"""
+String দেখলে প্রথমে এই ৪টি প্রশ্ন করুন:
+আমাকে কি একটি character দরকার?
+        ↓
+Indexing
+        ↓
+O(1)
+
+পুরো string দেখতে হবে?
+        ↓
+Traversal
+        ↓
+O(n)
+
+String-এর একটি অংশ দরকার?
+        ↓
+Slicing
+        ↓
+O(k)
+
+String reverse করতে হবে?
+        ↓
+[::-1]
+        ↓
+O(n) time + O(n) space
+
 
 """
