@@ -1,6 +1,26 @@
 
 
+# Leectcode Problem: 125
+# String Cleaning + Reverse
+class Solution:
+   def isPalindrome(self, s: str) -> bool:
+      cleaned = ""
 
+      for cha in s.lower():
+         if cha.isalnum():
+            cleaned += cha 
+
+      return cleaned == cleaned[::-1]
+
+# Complexity
+# Time Complexity: O(n) — string পরিষ্কার করা ও reverse তুলনা করার জন্য linear time লাগে।
+# Extra Space Complexity: O(n) — cleaned string এবং reverse operation-এর জন্য অতিরিক্ত memory লাগতে পারে।
+
+
+
+
+
+# Two Pointers
 class Solution:
    def isPalindrome(self, s: str) -> bool:
       left = 0
