@@ -1,6 +1,6 @@
 
 
-# Leetcode Problem
+# Leetcode Problem: 1502
 # ArithmeticProgression_form_sequence
 class Solution:
    def canMakeArithmeticProgression(self, arr: list[int])-> bool:

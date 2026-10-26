@@ -1,6 +1,6 @@
 
 
-# Leetcode Problem
+# Leetcode Problem: 1480
 # Running_sum_1d_array
 class Solution:
    def runningSum(self, nums: list[int])-> list[int]:

@@ -1,6 +1,6 @@
 
 
-# Leetcode Problem
+# Leetcode Problem: 704
 # Binary_search
 class Solution:
    def search(self, nums: list[int], target: int)-> int:

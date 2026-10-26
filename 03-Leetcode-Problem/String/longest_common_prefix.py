@@ -1,5 +1,6 @@
 
 
+# Leetcode Problem: 14
 class Solution:
    def longestCommonPrefix(self, strs: list[str]) ->str:
       result = ""

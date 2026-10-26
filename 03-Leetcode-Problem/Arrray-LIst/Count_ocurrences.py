@@ -1,7 +1,7 @@
 
 
 
-# Leetcode problem
+# Leetcode problem: 1365
 # How-many_numbers_smaller_than_current_number
 class Solution:
    def samllerNumbersThanCurrent(self, nums: list[int])-> list[int]:

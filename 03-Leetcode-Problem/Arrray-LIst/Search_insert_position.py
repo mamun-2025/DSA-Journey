@@ -34,3 +34,4 @@ target = 5
 
 solution = Solution()
 print(solution.searchInsert(nums, target))
+
