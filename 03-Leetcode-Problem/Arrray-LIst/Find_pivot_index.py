@@ -1,41 +1,4 @@
 
-n = 6 
-
-for i in range(n):
-   print("i = ", i)
-
-   for j in range(i):
-      print("   j=", j)
-
-
-nums = [1, 7, 3, 6, 5, 6]
-
-# LeetCode 724 — Find Pivot Index
-# Brute Force 
-class Solution:
-   def pivotIndex(self, nums: list[int]) -> int:
-      n = len(nums)
-
-      for i in range(n):
-         left_sum = 0
-         right_sum = 0
-
-         for j in range(i):
-            left_sum += nums[j]
-
-         for j in range(i + 1, n):
-            right_sum += nums[j]
-
-         if left_sum == right_sum:
-            return i 
-
-      return -1 
-
-# Complexity 
-# Time Complexity: O(n^2)— প্রতিটি index-এর জন্য আবার বাম ও ডান পাশের যোগফল হিসাব করতে হয়।
-# Auxiliary Space: O(1) — কয়েকটি variable ছাড়া অতিরিক্ত array ব্যবহার করছি না।
-
-
 
 # Total Sum + Running Sum (Optimized)
 class Solution:
