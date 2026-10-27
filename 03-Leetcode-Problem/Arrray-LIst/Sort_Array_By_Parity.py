@@ -16,8 +16,8 @@ class Solution:
       return even + odd 
 
 # Complexity
-# Time Complexity: \(O(n)\) — প্রতিটি সংখ্যা একবার পরীক্ষা করা হয়।
-# Space Complexity: \(O(n)\) — অতিরিক্ত list-এ সংখ্যাগুলো রাখা হয়।
+# Time Complexity: O(n) — প্রতিটি সংখ্যা একবার পরীক্ষা করা হয়।
+# Space Complexity: O(n) — অতিরিক্ত list-এ সংখ্যাগুলো রাখা হয়।
 
 
 
@@ -41,8 +41,8 @@ class Soution:
 
 
 # Complexity
-# Time Complexity: \(O(n)\) — সর্বোচ্চ linear সংখ্যক pointer movement ও swap হয়।
-# Auxiliary Space Complexity: \(O(1)\) — নতুন array তৈরি করছি না; মূল array-তেই পরিবর্তন করছি।
+# Time Complexity: O(n) — সর্বোচ্চ linear সংখ্যক pointer movement ও swap হয়।
+# Auxiliary Space Complexity: O(1) — নতুন array তৈরি করছি না; মূল array-তেই পরিবর্তন করছি।
 
 """
 I use two pointers, one starting from the left and one from the right.
