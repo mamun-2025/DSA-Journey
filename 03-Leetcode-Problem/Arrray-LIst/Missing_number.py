@@ -33,3 +33,44 @@ Python-এর integer সাধারণত এই সমস্যায় overflo
 
 
 
+# XOR (Bit Manipulation)
+nums = [3, 0, 1]
+class Solution:
+   def missing_number(self, nums: list[int]) -> int:
+      n = len(nums)
+      missing = n 
+
+      for i, num in enumerate(nums):
+         missing = missing ^ i ^ num 
+
+      return missing
+"""
+মূল ধারণা
+XOR হলো একটি bitwise operation। Python-এ এর symbol হলো ^।
+
+XOR-এর তিনটি গুরুত্বপূর্ণ নিয়ম:
+Expression	Result	কারণ
+5 ^ 5	      0	      একই সংখ্যার XOR শূন্য
+5 ^ 0	      5	      শূন্যের সঙ্গে XOR করলে সংখ্যা অপরিবর্তিত
+5 ^ 3 ^ 5	3	      একই সংখ্যা দুবার থাকলে cancel হয়
+
+
+DRY RUN:
+
+i        num        missing ^ i ^ num              missing     
+__       ____       _________________              _______
+-        -                 -                          3     (n = len(nums) | missing = n)
+0        3          3 ^ 0 ^ 3                         0      
+1        0          0 ^ 1 ^ 0                         1
+2        1          1 ^ 2 ^ 1                         2
+
+missing = 2
+output: 2
+
+
+Complexity Analysis
+Time Complexity: O(n) — array একবার traverse করি।
+Auxiliary Space: O(1) — n, missing, i ও num-এর মতো কয়েকটি variable ব্যবহার করি।
+
+"""
+   
