@@ -20,4 +20,33 @@ class Solution:
 
 
 
-# 
+# Boyer-moore voting algorithm
+class Solution:
+   def majorityElement(self, nums: list[int]) -> int:
+      candidate = None
+      count = 0
+
+      for num in nums:
+         if count == 0:
+            candidate = num 
+
+         if num == candidate:
+            count += 1
+         else:
+            count -= 1
+
+      return candidate
+
+# Complexity Analysis
+# Time Complexity: O(n) — array একবার scan করি।
+# Auxiliary Space: O(1) — শুধু candidate ও count-এর মতো কয়েকটি variable রাখি।
+
+"""
+First, I can use a hash map to count the frequency of each element.
+This takes O(n) time and O(n) extra space.
+To optimize space, I can use the Boyer-Moore Voting Algorithm, 
+which maintains a candidate and a counter.
+Since a majority element is guaranteed to exist, the final candidate is the answer.
+The optimized solution takes O(n) time and O(1) extra space.
+
+"""
