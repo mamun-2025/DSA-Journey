@@ -28,7 +28,7 @@ Python-এর sorting implementation-ও অতিরিক্ত space ব্�
 nums = [-4, -1, 0, 3, 10]
 # Two Pointers (Optimal Solution)
 class Solution:
-   def sortSquares(self, nums: list[int]) -> list[int]:
+   def sortedSquares(self, nums: list[int]) -> list[int]:
       n = len(nums)
       result = [0] * n 
 
