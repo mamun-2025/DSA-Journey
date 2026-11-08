@@ -1,55 +1,85 @@
 
 
+# তোমাকে একটি Integer List এবং একটি সংখ্যা k দেওয়া হবে।
+
+# তোমাকে পরীক্ষা করতে হবে:
+# - একই Value কি একাধিকবার আছে?
+# - থাকলে তাদের Index-এর Distance কি k-এর সমান অথবা ছোট?
+# দুটি শর্তই পূরণ হলে True, অন্যথায় False।
+
+# 1. Brute Force Approach — Nested Loop
 # Leetcode Problem: 219 
 nums = [1, 2, 3, 1]
 k = 3
 
-# Brute Force(Nested Loop)
-class Solution:
-   def containsNearbyDuplicates(self, nums: list[int], k: int)-> bool:
-      n = len(nums)
+def containsNearbyDuplicate(nums, k):
+   for i in range(len(nums)):
+      for j in range(i+1, len(nums)):
 
-      for i in range(n):
-         for j in range(i + 1, min(i + k + 1, n)):
-            if nums[i] == nums[j]:
-               return True
-
-      return False
-
-   
-# Time Complexity: O(n X K)
-# Space Complexity: O(1)
-
-
-# Hash Set + Siliding Window
-nums = [1, 2, 3, 1, 2, 3]
-k = 2
-
-class Solution:
-   def containsNearbyDuplicate(self, nums: list[int], k: int)-> bool:
-      seen = set()
-
-      for i, num in enumerate(nums):
-         if num in seen:
+         if nums[i] == nums[j] and abs[i-j] <= k:
             return True
 
-         seen.add(num)
+   return False
+
+# Complexity
+# - Time Complexity: O(n²) — Nested Loop-এর কারণে।
+# - Space Complexity: O(1) — অতিরিক্ত কোনো Data Structure ব্যবহার করছি না।
+# সমস্যা: বড় Array হলে অনেক বেশি তুলনা করতে হবে।
+
+# আমরা এটাকে O(n) করতে চাই।
+
+
+
+
+# 2. Optimized Approach — Dictionary + Index Mapping
+# Hash Set + Siliding Window
+nums = [1, 2, 3, 1]
+k = 3
+
+class Solution:
+   def containsNearbyDuplicate(self, nums: list[int], k: int) -> bool:
+      last_seen = {}
+
+      for i, num in enumerate(nums):
+
+         if num in last_seen:
+            return True
+
+         last_seen.add(num)
 
          if i >= k:
-            seen.remove(nums[i - k])
+            last_seen.remove(num[i-k])
 
       return False
 
 
-# Time Complexity: O(n)
-# Space Complexity: O(min(n, k))
-
 """
-I use a hash set to maintain a sliding window of the previous k elements.
-For each number, I check whether it already exists in the set.
-If it does, a nearby duplicate exists, so I return True.
-Otherwise, I add the number and remove the element that is no longer within the allowed window.
+Complexity Analysis
+ধরি, Array-এর Length n।
+
+Time Complexity:
+- Loop: O(n)
+- Set membership: Average O(1)
+- Set add: Average O(1)
+- Set remove: Average O(1)
+সুতরাং:
+O(n)
+
+Space Complexity: O(min(n,k+1))
+
+Set-এ সর্বোচ্চ kটি Element-এর মতো সংরক্ষণ প্রয়োজন হতে পারে (Window-এর সীমার কারণে)।
+
+
+Interview:
+I use a Set to maintain a sliding window of the most recent elements.
+For each element, I first check whether it already exists in the Set.
+If it exists, I return True because a duplicate is found within distance k.
+Otherwise, I add the current element to the Set.
+If the current index is greater than or equal to k, I remove the element that is outside the allowed window.
 If no nearby duplicate is found, I return False.
-The average time complexity is 0(n), with O(min(n,k)) auxiliary space.
+Time Complexity: O(n) average.
+Space Complexity: O(min(n, k + 1)).
 
 """
+
+
