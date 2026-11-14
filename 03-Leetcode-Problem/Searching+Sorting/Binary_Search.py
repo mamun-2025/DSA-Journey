@@ -1,7 +1,7 @@
 
 
 
-# Leetcode Problem:  
+# Leetcode Problem: 704. Binary Search
 # Approach 1 — Linear Search (Brute Force)
 
 nums = [10, 20, 30, 40, 50]
