@@ -123,4 +123,15 @@ time: O(log x)
 কোনো অতিরিক্ত Array বা Data Structure তৈরি করছি না।
 space: O(1)
 
+Interview:
+I will use Binary Search to solve this problem efficiently.
+First, I will define the seach range from zero to x.
+Then, I will calculate the middle value and check whether its square is less than or equal to x.
+If the square is less than or equal to x, I will store the middle value as a potential answer 
+and search in the right half for a larger valid answer.
+Otherwise, I will search in the left half.
+Finally, I will return the largest valid integer.
+The time complexity is O(log x), and the space complexity is O(1).
+
+
 """
