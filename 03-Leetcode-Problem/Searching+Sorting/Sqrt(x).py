@@ -40,7 +40,7 @@ Find the largest integer r such that r^2 <= x.
 # Leetcode Problem: 69. Sqrt(x)
 # Approach 1 — Simple Approach: Linear Search
 class Solution:
-   def sqrt(self, x: int)-> int:
+   def mySqrt(self, x: int)-> int:
 
       result = 0
 
@@ -91,7 +91,7 @@ Invalid: 5–7
 # and since we round it down to the nearest integer, 2 is returned.
 
 class Solution:
-   def sqrt(self, x: int)-> int:
+   def mySqrt(self, x: int)-> int:
       left = 0
       right = x 
 
