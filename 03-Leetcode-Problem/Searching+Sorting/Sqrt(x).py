@@ -133,5 +133,4 @@ Otherwise, I will search in the left half.
 Finally, I will return the largest valid integer.
 The time complexity is O(log x), and the space complexity is O(1).
 
-
 """
